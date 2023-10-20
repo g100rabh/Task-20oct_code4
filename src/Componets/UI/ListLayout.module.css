@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;400&family=Playfair+Display:ital@1&family=Poppins:wght@100;400&family=Rajdhani:wght@300&family=Roboto+Condensed:ital@1&family=Roboto:wght@500&family=Urbanist:wght@300;500&display=swap");
+
+.listCon {
+  width: 1440px;
+  height: 900px;
+  border-radius: 32px;
+  background: #ebf2f7;
+
+  /* Shadow */
+  box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14),
+    0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listItem {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  
+}
+
+.listUl{
+    margin-top: 2.5rem;
+}
+
+.listCard {
+  width: 700px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14),
+    0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  padding: 0 0 1rem 1rem;
+}
+
+.listTextCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.listTextCon > * {
+  margin: 2px;
+}
+.listCard img {
+  width: 67px;
+  height: 67px;
+  flex-shrink: 0;
+  border-radius: 67px;
+  margin-right: 1rem;
+}
+.close {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  font-size: larger;
+  color: orange;
+}
+
+.listTextCon h3 {
+  color: #212121;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.listTextCon p {
+  color: #212121;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.listTextCon span {
+  color: #b9b9b9;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.pageCountCon{
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    align-items: center;
+}
+
+.pageCountCon li {
+    list-style: none;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.pageCountCon li:hover{
+    cursor: pointer;
+}

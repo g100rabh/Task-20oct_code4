@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import "./App.css";
+import MainUi from "./Componets/UI/MainUi";
+import SideBar from "./Componets/UI/SideBar";
+import { storeActions } from "./store/store-slice";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    fetchDataHandler();
+  }, []);
+
+  const fetchDataHandler = async () => {
+    try {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "GET",
+      });
+      const data = await res.json();
+      console.log(data);
+      if (res.ok) {
+        dispatch(storeActions.setNewsList(data));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainUi />
     </div>
   );
 }
